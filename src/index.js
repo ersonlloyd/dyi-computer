@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { ApolloClient } from 'apollo-client'
+import { ApolloProvider } from  'react-apollo'
+import { InMemoryCache } from 'apollo-cache-memory'
+import { RestLink } from 'apollo-link-rest'
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
