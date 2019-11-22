@@ -1,0 +1,78 @@
+//styles for all common components
+$light-gray: #ededed;
+
+$black: #232323;
+$orange: #e55710;
+$light-orange: lighten($orange, 10%);
+$purple: #342a47;
+$blue: deepskyblue;
+$gray: #525252;
+$smoke: #d4d4d4;
+$green: #bbe187;
+
+// Input
+input {
+  border: 1px solid $light-gray;
+  padding: 6px 8px;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+.input-field {
+  &.space-right {
+    margin-right: 16px;
+  }
+
+  &.column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  > label {
+    margin-bottom: 4px;
+  }
+}
+
+// radioButton
+.radio-button {
+  & {
+    width: 38px;
+  }
+
+  > input[type="radio"] {
+    visibility: hidden; /* 1 */
+    height: 0; /* 2 */
+    width: 0; /* 2 */
+  }
+
+  > label {
+    display: flex;
+    flex: auto;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    color: $smoke;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid $light-gray;
+    transition: color 0.1s ease-out, background-color 0.1s ease-in;
+    user-select: none;
+    margin-right: 8px;
+    font-weight: 700;
+  }
+
+  > input[type="radio"]:checked + label {
+    background-color: $orange;
+    color: #fff;
+  }
+
+  > input[type="radio"]:hover:not(:checked) + label {
+    background-color: $light-orange;
+    color: #fff;
+  }
+}

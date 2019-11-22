@@ -1,0 +1,56 @@
+$gray: #cbcbcb;
+$orange: #e55710;
+$dark-orange: darken($orange, 3%);
+
+// HEADER
+.horizontal-divider {
+  height: 38px;
+  border: 1px solid $gray;
+  margin-top: 4px;
+}
+
+.logo {
+  width: 120px !important;
+}
+
+.header-menu {
+  & {
+    margin: 16px 0;
+  }
+
+  > .menu > .right {
+    display: flex;
+    align-self: center;
+  }
+}
+
+.button {
+  &.-orange {
+    background: $orange;
+    color: #fff;
+
+    &.-outline {
+      border: 1px solid $orange;
+      background: #fff;
+      color: $orange;
+    }
+
+    &:hover,
+    &.-outline:hover {
+      background: $dark-orange;
+      color: #fff;
+    }
+  }
+}
+
+// CONTENT
+.banner-container {
+  > .banner {
+    width: 100%;
+    height: 400px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
